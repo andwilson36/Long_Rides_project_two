@@ -1,9 +1,17 @@
-const Car = require("./cars");
+const User = require("./user")
 const Driver = require("./driver");
 const Location = require("./location");
 const Pickup = require("./pickup");
 const Rider = require("./rider");
 
+Rider.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+Driver.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
 Driver.hasOne(Location, {
   foreignKey: "destination_id",
   onDelete: "CASCADE",
@@ -23,7 +31,7 @@ Pickup.hasOne(Rider, {
 });
 
 module.exports = {
-  Car,
+  User,
   Driver,
   Location,
   Pickup,
