@@ -1,0 +1,36 @@
+.navbar {
+    background-color: rgb(224, 224, 224);
+}
+
+.main {
+    margin-top: 9rem;
+}
+
+.title {
+    font-size: 10rem;
+}   
+
+.subtitle {
+    font-size: 8rem;
+}
+
+.info-container {
+    background-color: rgb(236, 236, 236);
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+    padding: 5rem 4rem 5rem 4rem;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.form-title {
+    margin-bottom: 2rem;
+}
+
+.form-control {
+    margin-top: 1.5rem;
+}
+
+.form-btn {
+    margin-top: 2rem;
+}
