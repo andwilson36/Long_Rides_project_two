@@ -6,12 +6,12 @@ class pickup extends Model {}
 
 pickup.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
+    pickup_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
     street: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,7 +36,7 @@ pickup.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "category",
+    modelName: "pickup",
   }
 );
 
