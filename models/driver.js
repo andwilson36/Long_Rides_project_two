@@ -10,8 +10,10 @@ driver.init(
     driver_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      references: {
+        model: 'user',
+        key: 'user_id',
+    }
     },
     car: {
         type: DataTypes.STRING,
