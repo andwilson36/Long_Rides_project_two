@@ -1,8 +1,11 @@
-
 <div class="container">
     <form class="row g-3">
         <div class="col-auto">
             <label for="user" class="visually-hidden">Username</label>
+            <input type="text" readonly class="form-control-plaintext" id="username">
+        </div>
+        <div class="col-auto">
+            <label for="email" class="visually-hidden">Email</label>
             <input type="text" readonly class="form-control-plaintext" id="username">
         </div>
         <div class="col-auto">
@@ -13,6 +16,7 @@
             <button type="submit" class="btn btn-primary mb-3">Submit</button>
         </div>
         <div class="col-auto">
-            <p>New to Long Rides?<span><a class="hyperlink" href="signup.handlebars"> Sign Up Here!</a></span></p>
+            <p>Existing User? <span><a class="hyperlink" href="login.handlebars">Login here!</a></span></p>
         </div>
     </form>
+</div>
