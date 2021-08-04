@@ -1,38 +1,45 @@
 <nav class="navbar navbar-light">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Long Rides</span>
-      <button type="button" class="btn btn-primary">
-          {{#if signUp}}
-          <span>Sign Up</span>
-          {{else}}
-          <span>Login</span>
-          {{/if}}
-      </button>
-    </div>
-  </nav>
-  <div class="container main">
-    <div class="row">
-      <div class="col align-self-start">
-        <div class="row logo">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Long Rides</span>
+    <button type="button" class="btn btn-primary">
+      <span>Login</span>
+    </button>
+  </div>
+</nav>
+<div class="container main">
+  <div class="row">
+    <div class="col align-self-start">
+      <div class="row logo">
 
-        </div>
-        <div class="row">
-          <h1 class="title">Long</h1>
-          <h2 class="subtitle">Rides</h2>
-        </div>
-        <div class="row brand-statement">
-          <h3>Brand statement</h3>
-        </div>
       </div>
-      <div class="col align-self-end">
-        {{#if signUp}}
-        {{> sign-up}}
-        {{else}}
-        {{> login}}
-        {{/if}}
+      <div class="row">
+        <h1 class="title">Long</h1>
+        <h2 class="subtitle">Rides</h2>
+      </div>
+      <div class="row brand-statement">
+        <h3>Brand statement</h3>
+      </div>
+    </div>
+    <div class="col align-self-end">
+      <div class="container">
+        <form class="row g-3 login-form">
+          <div class="col-auto">
+            <label for="user" class="visually-hidden">Username</label>
+            <input type="text" class="form-control-plaintext" id="username-login">
+          </div>
+          <div class="col-auto">
+            <label for="inputPassword2" class="visually-hidden">Password</label>
+            <input type="password" class="form-control" id="password-login" placeholder="Password">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+          </div>
+          <div class="col-auto">
+            <p>New to Long Rides?<span><a class="hyperlink" href="signup.handlebars"> Sign Up Here!</a></span></p>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
   <script src="../public/js/login.js"></script>
-  
