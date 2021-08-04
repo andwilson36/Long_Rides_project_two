@@ -21,25 +21,22 @@
       </div>
     </div>
     <div class="col align-self-end">
-      <div class="container">
-        <form class="row g-3 login-form">
-          <div class="col-auto">
-            <label for="user" class="visually-hidden">Username</label>
-            <input type="text" class="form-control-plaintext" id="username-login">
+      <div class="container info-container">
+        <h2 class="text-center form-title">Login</h2>
+        <form class="row g-3">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control username" id="username-login" placeholder="Username"
+              aria-label="Username">
           </div>
-          <div class="col-auto">
-            <label for="inputPassword2" class="visually-hidden">Password</label>
-            <input type="password" class="form-control" id="password-login" placeholder="Password">
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Submit</button>
-          </div>
-          <div class="col-auto">
-            <p>New to Long Rides?<span><a class="hyperlink" href="signup.handlebars"> Sign Up Here!</a></span></p>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control password" id="password-login" placeholder="Password"
+              aria-label="Password">
           </div>
         </form>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-primary form-btn">Login</button>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <script src="../public/js/login.js"></script>
+      <script src="../public/js/login.js"></script>
