@@ -6,45 +6,39 @@
         </button>
     </div>
 </nav>
-<div class="container main">
-    <div class="row">
+<div class="flex-container" id="flex1">
+    <div class="flex-child">
         <div class="col align-self-start">
-            <div class="row logo">
-
-            </div>
             <div class="row">
                 <h1 class="title">Long</h1>
                 <h2 class="subtitle">Rides</h2>
             </div>
-            <div class="row brand-statement">
+            <div class="row brand-statement" id="brand">
                 <h3>Brand statement</h3>
             </div>
         </div>
-        <div class="col align-self-end">
-            <div class="container info-container">
-                <h2 class="text-center form-title">Sign-Up</h2>
-                <form class="row g-3 signup-form">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control username" id="username-signup" placeholder="Username"
-                            aria-label="Username">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control email" placeholder="Email Address" aria-label="Email">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control password" id="password-signup" placeholder="Password"
-                            aria-label="Password">
-                    </div>
-                </form>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <button type="submit" class="btn btn-primary form-btn">Sign-Up</button>
-                </div>
-                <div class="col-auto text-center mt-5">
-                    <p>Already a user?<span><a class="hyperlink" href="/"> Log In Here!</a></span></p>
-                </div>
-            </div>
+    </div>
+</div>
+<div class="flex-container">
+    <form class="flex-child" id="flex2">
+        <h1 class="signTitle">Sign-Up</h1>
+        <div class="col-auto" id="topfill">
+              <label for="user"></label>
+              <input type="text" class="form-fill" placeholder="Username" id="username">
+          </div>
+          <div class="col-auto">
+              <label for="email"></label>
+              <input type="text" class="form-fill" placeholder="Email" id="username">
+          </div>
+          <div class="col-auto">
+              <label for="inputPassword2"></label>
+              <input type="password" class="form-fill" id="inputPassword2" placeholder="Password">
+          </div>
+          <div class="col-auto">
+              <button type="submit" class="submit">Submit</button>
+        </div>
+        <div class="col-auto">
+            <p>Already a user?<span><a class="hyperlink" href="/"> Log In Here!</a></span></p>
         </div>
 
-        <script src="../public/js/login.js"></script>
+<script src="../public/js/login.js"></script>
