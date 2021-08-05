@@ -35,7 +35,7 @@ router.get("/profile", async (req, res) => {
   try {
 
 
-    res.render("profile-page", {
+    res.render("profile", {
 
       // loggedIn: req.session.loggedIn,
     });
