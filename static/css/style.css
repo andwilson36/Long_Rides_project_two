@@ -118,3 +118,7 @@ body{
     color:#293740;
     font-size:18px;
 }
+
+#map {
+    height: 500px;
+  }
