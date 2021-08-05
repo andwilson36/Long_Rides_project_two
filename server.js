@@ -30,7 +30,8 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+// static instead of public
+app.use(express.static(path.join(__dirname, 'static')));
 
 app.use(routes);
 
