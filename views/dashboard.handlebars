@@ -2,7 +2,7 @@
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
-            src="/long-rides-light-mode.png"
+            src="/static/images/long-rides-light-mode.png"
             alt=""
             width="300"
             height="90"
@@ -75,21 +75,33 @@
             <label for="floatingPassword">Destination address</label>
           </div>
           <div>
-            <br />
-            <div class="text-center">
+            <br /> 
+            <div>
               <h4>Google Maps</h4>
-              <img
-                src="/austin-map.png"
-                alt="Maps"
-                width="400"
-                height="300"
-                style="border: 3px solid grey; border-radius: 3%"
-              />
+              <div id="map"></div>
+
+              
             </div>
           </div>
         </div>
       </div>
     </div>
+    
+<script>
+	function initMap() {
+		var mapOptions = {
+          center: new google.maps.LatLng(45.54, -122.6),
+          zoom: 13
+        };
+       
+		map = new google.maps.Map(document.getElementById("map"), mapOptions
+  );
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YUeF9azIgULQN0QlDqqyq7RjRkg20qY&callback=initMap&libraries=&v=weekly"></script>
+
+
     <footer style="height: 100px;" class="bg-dark text-center text-white fixed-bottom">
       <!-- Grid container -->
       <div style="height: 50px; margin:auto;" class="container p-4 pb-0">
@@ -112,4 +124,8 @@
         <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
       </div>
       <!-- Copyright -->
+      
     </footer>
+
+               
+  
