@@ -114,6 +114,15 @@ body{
     border-radius: 3px;
 }
 
+.dashboard {
+    margin-top: 6rem;
+}
+
+.list-col {
+    margin-left: 8rem;
+    margin-right: 15rem;
+}
+
 #bottomtext {
     color:#293740;
     font-size:18px;
@@ -121,4 +130,5 @@ body{
 
 #map {
     height: 500px;
+    width: 420px
   }
