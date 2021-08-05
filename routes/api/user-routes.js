@@ -8,12 +8,11 @@ const { User } = require('../../models');
 router.post('/',async (req, res) => {
   console.log(req.body);
     try {
-        const newUser = await User.create(
-          req.body
-            // username: req.body.username,
-            // email: req.body.email,
-            // password: req.body.password,
-        );
+        const newUser = await User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+        });
       
         console.log(newUser);
         //set  up sessions with loggedIn variable set to true
@@ -22,7 +21,6 @@ router.post('/',async (req, res) => {
             req.session.password = newUser.password;
             req.session.loggedIn = true;
             res.status(200).json(newUser);
-      
           });
         } catch (err) {
           console.log(err);
