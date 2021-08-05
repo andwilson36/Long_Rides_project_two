@@ -22,9 +22,14 @@
     border-radius: 3px;
 }
 
+.navbar-brand {
+    font-size: 2.5rem;
+} 
+
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(224, 224, 224)
 }
 
 .headLogo{
