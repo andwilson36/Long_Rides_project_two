@@ -8,6 +8,7 @@ const driverFormHandler = async (event) => {
     //change these 
     const num_seats = "3";
     const driver_name = "erin";
+    
   
     if (destination && pickup && price && description && num_seats && driver_name) {
       const response = await fetch('/api/drive-routes/', {
