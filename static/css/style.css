@@ -124,8 +124,13 @@ body{
 }
 
 .list-col {
-    margin-left: 8rem;
+    margin-left: 5rem;
     margin-right: 15rem;
+    padding: 0px;
+}
+
+.card {
+    
 }
 
 #bottomtext {

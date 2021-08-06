@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
-const { User } = require("../models");
+const { User, Ride } = require("../models");
 
 router.get("/", withAuth, async (req, res) => {
   try {
@@ -47,10 +47,22 @@ router.get("/profile", async (req, res) => {
 router.get("/dashboard", async (req, res) => {
   try {
 
+    const userData = await User.findAll();
+
+    const rideData = await Ride.findAll();
+
+    const users = userData.map((user) =>
+      user.get({ plain: true })
+    );
+
+    const ride = rideData.map((rides) =>
+      rides.get({ plain: true })
+    );
 
     res.render("dashboard", {
-
-      // loggedIn: req.session.loggedIn,
+      users,
+      ride,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);

@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class ride extends Model {}
+class Ride extends Model {}
 
-ride.init(
+Ride.init(
   {
     // define columns
     ride_id: {
@@ -13,37 +13,25 @@ ride.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    destination_id: {
-        type: DataTypes.INTEGER,
+    destination: {
+        type: DataTypes.STRING,
         allowNull: false,
-        references: {
-            model: 'location',
-            key: 'destination_id',
-        }
     },
-    pickup_id: {
-        type: DataTypes.INTEGER,
+    pickup: {
+        type: DataTypes.STRING,
         allowNull: false,
-        references: {
-            model: 'pickup',
-            key: 'pickup_id',
-        }
     },
-    driver_id: {
-        type: DataTypes.INTEGER,
+    driver_name: {
+        type: DataTypes.STRING,
         allowNull: false,
-        references: {
-            model: 'driver',
-            key: 'driver_id',
-        }
     },
-    rider_id: {
+    price: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: {
-            model: 'rider',
-            key: 'rider_id',
-        }
+    },
+    num_seats: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
   },
   {
@@ -55,4 +43,4 @@ ride.init(
   }
 );
 
-module.exports = ride;
+module.exports = Ride;
