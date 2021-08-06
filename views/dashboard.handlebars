@@ -5,11 +5,11 @@
       {{#each ride as |rides|}}
       <div class="card">
         <div class="card-header text-center">
-          <p>{{rides.pickup}} to {{rides.destination}}</p>
+          <p class="ride-info"><strong>{{rides.pickup}}</strong> to <strong>{{rides.destination}}</strong></p>
         </div>
         <div class="card-body text-center">
-          <p>{{rides.driver_name}} - {{rides.price}} - {{rides.num_seats}}</p>
-          <button class="btn btn-primary" type="submit">Join this ride!</button>
+          <p class="ride-info">{{rides.driver_name}} - {{rides.price}} - {{rides.num_seats}}</p>
+          <button class="btn btn-primary" id="join-btn" type="submit">Join this ride!</button>
         </div>
       </div>
       {{/each}}

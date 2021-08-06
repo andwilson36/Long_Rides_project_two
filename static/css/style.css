@@ -104,13 +104,14 @@ body{
 .signTitle {
     color: #293740;
     margin-top:3rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 .col-auto {
     margin-left: 8rem;
     margin-right: 8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 #bottomtext {
@@ -121,22 +122,6 @@ body{
     color:white;
 }
 
-.form-fill {
-    height:2rem;
-    border:none;
-    background-color: gray;
-    border-radius: 3px;
-    color:white;
-}
-.drivefill{
-    height:2rem;
-    border:none;
-    background-color: gray;
-    border-radius: 3px;
-    color:white;
-    width:10rem;
-    text-align: center;
-}
 .submit {
     width:6rem;
     height:2rem;
@@ -148,6 +133,19 @@ body{
 
 .dashboard {
     margin-top: 6rem;
+}
+
+#login-btn {
+    background-color: rgb(50, 50, 255);
+}
+
+#join-btn {
+    background-color: #d66102;
+    border: 1px solid #BF5700;
+}
+
+.ride-info {
+    font-size: 1.2rem;
 }
 
 .setbutton{
