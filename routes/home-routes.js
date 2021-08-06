@@ -20,12 +20,7 @@ router.get("/", withAuth, async (req, res) => {
 
 router.get("/signup", async (req, res) => {
   try {
-
-
-    res.render("signup-page", {
-
-      // loggedIn: req.session.loggedIn,
-    });
+    res.render("signup-page", {});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -37,8 +32,8 @@ router.get("/profile", async (req, res) => {
 
 
     res.render("profile", {
-
-      // loggedIn: req.session.loggedIn,
+    profile: req.session.profile,
+    loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
@@ -51,8 +46,7 @@ router.get("/driver", async (req, res) => {
 
 
     res.render("driver-dashboard", {
-
-      // loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
