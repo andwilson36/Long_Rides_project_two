@@ -10,7 +10,7 @@ Rider.belongsTo(User, {
   onDelete: 'CASCADE'
 });
 Driver.belongsTo(User, {
-  foreignKey: 'user_id',
+  foreignKey: 'driver_id',
   onDelete: 'CASCADE'
 });
 Driver.hasOne(Location, {
