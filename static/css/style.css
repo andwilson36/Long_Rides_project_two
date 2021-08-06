@@ -150,26 +150,6 @@ body{
     margin-top: 6rem;
 }
 
-.list-col {
-    margin-left: 5rem;
-    margin-right: 15rem;
-    padding: 0px;
-}
-
-.card{
-    margin-top: 1rem;
-    margin-left:auto;
-    margin-right: auto;
-    width: 30rem;
-    display:block;
-    background-color: rgb(236, 235, 236);
-    border: 1px solid grey;
-    border-radius: 3px;
-    text-align:center;
-}
-.card-body{
-    width:20rem;
-}
 .setbutton{
     background-color: gray;
     color:white;
@@ -188,7 +168,31 @@ body{
     color:#293740;
     font-weight: bold;
 }
+
+.label {
+    font-size: 1.5rem;
+}
+
+.list-col {
+    background-color: rgb(243, 243, 243);
+    border: 3px outset rgb(199, 199, 199);
+    border-radius: 6px;
+}
+
+.dropdown-map {
+    background-color: rgb(243, 243, 243);
+    border: 3px outset rgb(199, 199, 199);
+    border-radius: 6px;
+}
+
+#start {
+    margin-bottom: 1.5rem;
+}
+
+#end {
+    margin-bottom: 2rem;
+}
+
 #map {
     height: 500px;
-    width: 420px
   }
