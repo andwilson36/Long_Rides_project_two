@@ -14,22 +14,24 @@
       {{/each}}
     </div>
     <div class="col-4">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="starting point" />
-        <label for="floatingInput">Pick-up location</label>
+      <div class='form-field'>
+        <label for='colorFilter'>Pick-Up</label>
+        <select id='colorFilter' class='form-control'>
+          {{#each locations as |location|}}
+          <option value="{{location}}">{{location.name}}</option>
+          {{/each}}
+        </select>
       </div>
-      <div>
-        <img style="
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 15px;
-              " src="/PngItem_2487974.png" alt="" width="20" height="20" />
+
+      <div class='form-field'>
+        <label for='colorFilter'>Destination</label>
+        <select id='colorFilter' class='form-control'>
+          {{#each locations as |location|}}
+          <option value="{{location}}">{{location.name}}</option>
+          {{/each}}
+        </select>
       </div>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="where you cant to go" />
-        <label for="floatingPassword">Destination address</label>
-      </div>
+
       <div>
         <br />
         <div id="map"></div>
