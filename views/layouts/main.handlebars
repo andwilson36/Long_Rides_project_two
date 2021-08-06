@@ -16,9 +16,20 @@
   <nav class="navbar">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">Long Rides</span>
+    {{#if loggedIn}}
+    <button type="button" class="btn btn-primary" onclick="window.location.href='dashboard'">
+      <span>Dashboard</span>
+    </button>
+   
+    <button type="button" class="btn btn-primary" onclick="window.location.href='profile'">
+      <span>Profile</span>
+    </button>
+  
+    {{else}}
     <button type="button" class="btn btn-primary" onclick="window.location.href='signup'">
       <span>Sign-Up</span>
     </button>
+    {{/if}}
   </div>
 </nav>
     {{{body}}}

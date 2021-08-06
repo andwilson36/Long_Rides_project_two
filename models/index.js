@@ -1,4 +1,5 @@
-const User = require("./User");
+const User = require("./user");
+const Driver = require("./driver");
 const Location = require("./location");
 const Pickup = require("./pickup");
 const Rider = require("./rider");
