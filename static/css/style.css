@@ -75,14 +75,22 @@ body{
 
 #flex2 {
     background-color: rgb(236, 235, 236);
-    margin-left: 6rem;
+    margin-left: 3rem;
     margin-bottom: 3rem;
     padding: 3rem 4rem 3rem 4rem;
     border: 1px solid grey;
     border-radius: 3px;
     text-align:center;
 }
-
+#flexmain{
+    background-color: rgb(236, 235, 236);
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem 1rem 3rem 1rem;
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-align:center;
+}
 .signTitle {
     color: #293740;
     margin-top:3rem;
@@ -108,6 +116,7 @@ body{
     border:none;
     background-color: gray;
     border-radius: 3px;
+    color:white;
 }
 
 .submit {

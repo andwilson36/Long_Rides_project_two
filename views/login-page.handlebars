@@ -1,39 +1,34 @@
 
-<div class="container main">
-  <div class="row">
-    <div class="col align-self-start">
-      <div class="row logo">
-
-      </div>
-      <div class="row">
-        <h1 class="title">Long</h1>
-        <h2 class="subtitle">Rides</h2>
-      </div>
-      <div class="row brand-statement">
-        <h3>Brand statement</h3>
-      </div>
+<div class="flex-container" id="flex1">
+    <div class="flex-child">
+        <div class="col align-self-start">
+            <div class="row">
+                <h1 class="title">Long</h1>
+                <h2 class="subtitle">Rides</h2>
+            </div>
+            <div class="row brand-statement" id="brand">
+                <h3>"Your Ride Starts Here!"</h3>
+            </div>
+        </div>
     </div>
-    <div class="col align-self-end">
-      <div class="container info-container">
-        <h2 class="text-center form-title">Login</h2>
-        <form class="row g-3 login-form">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control username" id="username-login" placeholder="Username"
+</div>
+<div class="flex-container" id="flexmain">
+    <form class="flex-child signup-form">
+        <h1 class="signTitle">Login</h1>
+        <div class="col-auto" id="topfill">
+             <input type="text" class="form-fill" id="username-login" placeholder="Username"
               aria-label="Username">
           </div>
-
-          <div class="input-group mb-3">
-            <input type="text" class="form-control password" id="password-login" placeholder="Password"
-              aria-label="Password">
+          <div class="col-auto">
+              <input type="text" class="form-fill" id="username-login" placeholder="Password"
+              aria-label="Username">
           </div>
-           <div class="d-grid gap-2 col-6 mx-auto">
-          <button type="submit" class="btn btn-primary form-btn">Login</button>
+          <div class="col-auto">
+              <button type="submit" class="form-fill">Submit</button>
         </div>
-        </form>
-       
-        <div class="col-auto text-center mt-5">
-          <p>New to Long Rides?<span><a class="hyperlink" href="signup"> Sign-Up Here!</a></span></p>
+        <div class="col-auto">
+            <p>New to Long Rides?<span><a class="hyperlink" href="signup"> Sign-Up Here!</a></span></p>
         </div>
-      </div>
-
+    </form>
+    
       <script src="js/login.js"></script>
