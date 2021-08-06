@@ -155,6 +155,7 @@ body{
     margin-right: 15rem;
     padding: 0px;
 }
+
 .card{
     margin-top: 1rem;
     margin-left:auto;
@@ -175,6 +176,7 @@ body{
     border:none;
     border-radius: 3px;
 }
+
 #bottomtext {
     color:#293740;
     font-size:18px;
