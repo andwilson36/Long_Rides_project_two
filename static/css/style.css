@@ -22,9 +22,14 @@
     border-radius: 3px;
 }
 
+.navbar-brand {
+    font-size: 2.5rem;
+} 
+
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(224, 224, 224)
 }
 
 .headLogo{
@@ -114,6 +119,15 @@ body{
     border-radius: 3px;
 }
 
+.dashboard {
+    margin-top: 6rem;
+}
+
+.list-col {
+    margin-left: 8rem;
+    margin-right: 15rem;
+}
+
 #bottomtext {
     color:#293740;
     font-size:18px;
@@ -121,4 +135,5 @@ body{
 
 #map {
     height: 500px;
+    width: 420px
   }
