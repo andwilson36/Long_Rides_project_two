@@ -15,7 +15,9 @@
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
