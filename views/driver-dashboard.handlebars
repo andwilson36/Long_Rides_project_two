@@ -1,51 +1,37 @@
-<nav class="navbar navbar-light btn-danger">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="/public/images/long-rides-light-mode.png" alt="" width="300" height="90" />
-    </a>
-  </div>
-  <div>
-    <form class="container-fluid justify-content-end">
-      <button class="btn btn-outline-warning btn-lg me-2" type="button">Log in</button>
-    </form>
-  </div>
-</nav>
-<br />
+<br>
 <div class="container">
   <div class="row">
     <div class="col">
       <h3>Create ride</h3>
       <br />
-      <div class="input-group mb-3">
+      <div class="input-group mb-3 col-8">
         <input type="text" class="form-control" placeholder="Destination address" aria-label="Username" />
-        <span class="input-group-text">at</span>
+        <span class="input-group-text">add</span>
         <input type="text" class="form-control" placeholder="Pick-up point" aria-label="Server" />
       </div>
       <br />
-      <div class="input-group mb-3">
+      <div class="input-group mb-3 col-4">
         <span class="input-group-text">$</span>
         <input type="number" min="0" class="form-control" placeholder="Price"
           aria-label="Amount (to the nearest dollar)" />
         <span class="input-group-text">.00</span>
       </div>
       <br />
-      <div class="mb-3">
+      <div class="mb-3 col-8">
         <label for="exampleFormControlTextarea1" class="form-label">Description:</label>
         <textarea class="form-control" id="exampleFormControlTextarea1"
           placeholder="Rules, time, number of stops, etc..." rows="3"></textarea>
       </div>
       <br />
       <div>
-        <button type="submit" class="btn btn-danger mb-3">Create</button>
+        <button style="margin-left: 1em;" type="submit" class="btn btn-danger">Create</button>
       </div>
     </div>
-    <div class="col">
+    {{!-- <div class="col">
       <div class="text-center">
         <h3>Google Maps</h3>
-        <img src="/public/images/austin-map.png" alt="Maps" width="400" height="300"
-          style="border: 3px solid grey; border-radius: 3%">
-      </div>
-    </div>
+        </div>
+    </div> --}}
   </div>
 </div>
 <footer style="height: 100px;" class="bg-dark text-center text-white fixed-bottom">
