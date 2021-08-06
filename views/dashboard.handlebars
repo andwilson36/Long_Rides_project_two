@@ -1,14 +1,17 @@
 <div class="container dashboard">
   <div class="row">
     <div class="col-4 list-col">
-      <div class="card" style="width: 18rem; margin-top: 20px;">
-        <div class="card-header">
-          Ride list:
-          <ul class="list-group list-group-flush">
-            
-          </ul>
+      <h2>Ride list:</h2>
+      {{#each ride as |rides|}}
+      <div class="card" style="width: 30rem; margin-top: 20px;">
+        <div class="card-header text-center">
+          <p>{{rides.pickup}} to {{rides.destination}}</p>
+        </div>
+        <div class="card-body text-center">
+          <p>{{rides.driver_name}} - {{rides.price}} - {{rides.num_seats}}</p>
         </div>
       </div>
+      {{/each}}
     </div>
     <div class="col-4">
       <div class="form-floating mb-3">

@@ -3,6 +3,7 @@ const Driver = require("./driver");
 const Location = require("./location");
 const Pickup = require("./pickup");
 const Rider = require("./rider");
+const Ride = require("./ride")
 
 Rider.belongsTo(User, {
   foreignKey: 'user_id',
@@ -36,4 +37,5 @@ module.exports = {
   Location,
   Pickup,
   Rider,
+  Ride,
 };
