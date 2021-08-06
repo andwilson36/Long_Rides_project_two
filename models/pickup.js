@@ -7,25 +7,20 @@ class pickup extends Model {}
 pickup.init(
   {
     pickup_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-    street: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    Name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-
-    city: {
+    Latitude: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    state: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    zip: {
+    Longitude: {
       type: DataTypes.STRING,
       allowNull: false,
     },
