@@ -10,11 +10,6 @@ Rider.belongsTo(User, {
   onDelete: 'CASCADE'
 });
 
-Driver.belongsTo(User, {
-  foreignKey: 'driver_id',
-  onDelete: 'CASCADE'
-});
-
 Rider.hasOne(Pickup, {
   foreignKey: "pickup_id",
 });
@@ -25,7 +20,6 @@ Pickup.hasOne(Rider, {
 
 module.exports = {
   User,
-  Driver,
   Location,
   Pickup,
   Rider,

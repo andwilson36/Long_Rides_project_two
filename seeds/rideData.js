@@ -5,6 +5,7 @@ const rideData = [
         destination: 'example dest',
         pickup: 'example pick',
         driver_name: 'example name',
+        description: 'three stops',
         price: 15,
         num_seats: '4'
     },
@@ -12,6 +13,7 @@ const rideData = [
         destination: 'example dest',
         pickup: 'example pick',
         driver_name: 'example name',
+        description: 'three stops',
         price: 15,
         num_seats: '4'
     },
@@ -19,6 +21,7 @@ const rideData = [
         destination: 'example dest',
         pickup: 'example pick',
         driver_name: 'example name',
+        description: 'three stops',
         price: 15,
         num_seats: '4'
     },
@@ -26,6 +29,7 @@ const rideData = [
         destination: 'example dest',
         pickup: 'example pick',
         driver_name: 'example name',
+        description: 'three stops',
         price: 15,
         num_seats: '4'
     },
