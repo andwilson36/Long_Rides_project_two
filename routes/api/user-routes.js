@@ -14,7 +14,7 @@ router.post('/',async (req, res) => {
             email: req.body.email,
             password: req.body.password,
         });
-
+      
         console.log(newUser);
         //set  up sessions with loggedIn variable set to true
         req.session.save(() => {
@@ -23,7 +23,7 @@ router.post('/',async (req, res) => {
             req.session.password = newUser.password;
             req.session.loggedIn = true;
             res.status(200).json(newUser);
-
+      
           });
         } catch (err) {
           console.log(err);

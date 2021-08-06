@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
-const { User, Ride } = require("../models");
+const { User, Ride, Location } = require("../models");
 
 router.get("/", withAuth, async (req, res) => {
   try {
@@ -31,6 +31,7 @@ router.get("/signup", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get("/profile", async (req, res) => {
   try {
 
@@ -44,12 +45,19 @@ router.get("/profile", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get("/dashboard", async (req, res) => {
   try {
 
     const userData = await User.findAll();
 
     const rideData = await Ride.findAll();
+
+    const locationData = await Location.findAll();
+
+    const locations = locationData.map((location) =>
+      location.get({ plain: true })
+    );
 
     const users = userData.map((user) =>
       user.get({ plain: true })
@@ -62,6 +70,7 @@ router.get("/dashboard", async (req, res) => {
     res.render("dashboard", {
       users,
       ride,
+      locations,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

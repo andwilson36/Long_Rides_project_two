@@ -2,31 +2,27 @@ const { Location } = require('../models');
 
 const locationdata = [
     {
-        street: '6104 Diamondleaf Bnd',
-        city: 'Austin',
-        state: 'TX',
-        zipcode: '78724',
+        name: 'Example place',
+        lat: '30.306',
+        long: '35.306',
     },
     {
-        street: '900 Durness Dr',
-        city: 'Austin',
-        state: 'TX',
-        zipcode: '78660',
+        name: 'Example place 2',
+        lat: '37.306',
+        long: '35.306',
     },
     {
-        street: '1966 Broken Oak St',
-        city: 'San Antonio',
-        state: 'TX',
-        zipcode: '78232',
+        name: 'Example place 3 ',
+        lat: '31.306',
+        long: '35.306',
     },
     {
-        street: '517 W Metcalfe St',
-        city: 'Hutto',
-        state: 'TX',
-        zipcode: '78634',
+        name: 'Example place 4',
+        lat: '32.306',
+        long: '35.306',
     },
 ];
 
-const seedLocation = () => User.bulkCreate(locationdata);
+const seedLocation = () => Location.bulkCreate(locationdata);
 
 module.exports = seedLocation;
