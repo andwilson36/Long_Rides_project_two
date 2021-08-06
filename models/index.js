@@ -9,18 +9,10 @@ Rider.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
+
 Driver.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
-});
-Driver.hasOne(Location, {
-  foreignKey: "destination_id",
-  onDelete: "CASCADE",
-});
-
-Location.hasOne(Driver, {
-  foreignKey: "driver_id",
-  onDelete: "CASCADE",
 });
 
 Rider.hasOne(Pickup, {

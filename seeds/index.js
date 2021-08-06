@@ -1,6 +1,7 @@
 const sequelize = require('../config/connection');
 const seedUser = require('./userSample')
 const seedRides = require('./rideData');
+const seedLocation = require('./locationData')
 //const seedPost = require('./postData');
 
 const seedAll = async () => {
@@ -10,6 +11,7 @@ const seedAll = async () => {
 
   await seedRides();
 
+  await seedLocation();
   //await seedPost();
 
   process.exit(0);
