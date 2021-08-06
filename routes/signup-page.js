@@ -4,8 +4,6 @@ const { User } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-
-
     res.render("login-page", {
       
       // loggedIn: req.session.loggedIn,

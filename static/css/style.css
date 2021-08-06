@@ -72,10 +72,19 @@ body{
     display: inline-flex;
 }
 
-
 #flex2 {
     background-color: rgb(236, 235, 236);
-    margin-left: 15rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem 4rem 3rem 4rem;
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-align:center;
+}
+#flex3{
+    background-color: rgb(236, 235, 236);
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 3rem;
     padding: 3rem 4rem 3rem 4rem;
     border: 1px solid grey;
@@ -83,6 +92,15 @@ body{
     text-align:center;
 }
 
+#flexmain{
+    background-color: rgb(236, 235, 236);
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem 1rem 3rem 1rem;
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-align:center;
+}
 .signTitle {
     color: #293740;
     margin-top:3rem;
@@ -108,8 +126,17 @@ body{
     border:none;
     background-color: gray;
     border-radius: 3px;
+    color:white;
 }
-
+.drivefill{
+    height:2rem;
+    border:none;
+    background-color: gray;
+    border-radius: 3px;
+    color:white;
+    width:10rem;
+    text-align: center;
+}
 .submit {
     width:6rem;
     height:2rem;
@@ -129,15 +156,38 @@ body{
     padding: 0px;
 }
 
-.card {
-    
+.card{
+    margin-top: 1rem;
+    margin-left:auto;
+    margin-right: auto;
+    width: 30rem;
+    display:block;
+    background-color: rgb(236, 235, 236);
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-align:center;
+}
+.card-body{
+    width:20rem;
+}
+.setbutton{
+    background-color: gray;
+    color:white;
+    border:none;
+    border-radius: 3px;
 }
 
 #bottomtext {
     color:#293740;
     font-size:18px;
 }
-
+.header{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#293740;
+    font-weight: bold;
+}
 #map {
     height: 500px;
     width: 420px

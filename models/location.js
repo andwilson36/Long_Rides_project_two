@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection.js");
 
-class location extends Model {}
+class location extends Model { }
 
 location.init(
   {
@@ -13,15 +13,16 @@ location.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Name: {
+
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Latitude: {
+    lat: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Longitude: {
+    long: {
       type: DataTypes.STRING,
       allowNull: false,
     },

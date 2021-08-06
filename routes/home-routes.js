@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
-const { User, Ride } = require("../models");
+const { User, Ride, Location } = require("../models");
 
 router.get("/", withAuth, async (req, res) => {
   try {
@@ -20,36 +20,52 @@ router.get("/", withAuth, async (req, res) => {
 
 router.get("/signup", async (req, res) => {
   try {
-
-
-    res.render("signup-page", {
-
-      // loggedIn: req.session.loggedIn,
-    });
+    res.render("signup-page", {});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
 router.get("/profile", async (req, res) => {
   try {
 
 
     res.render("profile", {
-
-      // loggedIn: req.session.loggedIn,
+    profile: req.session.profile,
+    loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+router.get("/driver", async (req, res) => {
+  try {
+
+
+    res.render("driver-dashboard", {
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get("/dashboard", async (req, res) => {
   try {
 
     const userData = await User.findAll();
 
     const rideData = await Ride.findAll();
+
+    const locationData = await Location.findAll();
+
+    const locations = locationData.map((location) =>
+      location.get({ plain: true })
+    );
 
     const users = userData.map((user) =>
       user.get({ plain: true })
@@ -62,6 +78,7 @@ router.get("/dashboard", async (req, res) => {
     res.render("dashboard", {
       users,
       ride,
+      locations,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
