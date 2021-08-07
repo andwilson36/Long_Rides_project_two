@@ -2,24 +2,24 @@ const { Location } = require('../models');
 
 const locationdata = [
     {
-        name: 'Example place',
-        lat: '30.306',
-        long: '35.306',
+        name: 'UT Campus',
+        address: 'University of Texas, Austin, TX',
     },
     {
-        name: 'Example place 2',
-        lat: '37.306',
-        long: '35.306',
+        name: 'Austin Airport',
+        address: '3600 Presidential Blvd, Austin, TX 78719',
     },
     {
-        name: 'Example place 3 ',
-        lat: '31.306',
-        long: '35.306',
+        name: 'Rainey Street',
+        address: '76 Rainey St, Austin, TX 78701',
     },
     {
-        name: 'Example place 4',
-        lat: '32.306',
-        long: '35.306',
+        name: 'Zilker Park',
+        address: '2207 Lou Neff Rd, Austin, TX 78746',
+    },
+    {
+        name: 'Barton Springs Pool',
+        address: 'Barton Springs Rd, Austin, TX 78704',
     },
 ];
 

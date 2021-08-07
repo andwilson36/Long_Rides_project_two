@@ -21,7 +21,7 @@
         <label class="label">Pick-Up:</label>
         <select id='start' class='form-control'>
           {{#each locations as |location|}}
-          <option value="{{location}}">{{location.name}}</option>
+          <option value="{{location.address}}">{{location.name}}</option>
           {{/each}}
         </select>
       </div>
@@ -30,7 +30,7 @@
         <label class="label">Destination:</label>
         <select id='end' class='form-control'>
           {{#each locations as |location|}}
-          <option value="{{location}}">{{location.name}}</option>
+          <option value="{{location.address}}">{{location.name}}</option>
           {{/each}}
         </select>
       </div>
