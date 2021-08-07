@@ -205,6 +205,10 @@ body{
     border: 3px outset rgb(199, 199, 199);
 }
 
+.card {
+    border: 3px outset rgb(199, 199, 199)
+}
+
 .card-body .btn {
     color: white;
 }
