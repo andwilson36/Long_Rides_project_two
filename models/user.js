@@ -32,8 +32,12 @@ User.init(
         validate: {
           len: [8]
         }
+      },
+      driver: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
       }
-    
     },
     {
       hooks: {

@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
-            <form class="driver-form">
+            <form class="driver-form" id="driver-form">
                 <h1 class="driverprompt text-center">Want to become a driver?</h1>
                 <div>
                     <label for="insurance"></label>
@@ -27,7 +27,7 @@
                 </div>
                 <div>
                     <label for="carmake"></label>
-                    <input type="text" class="form-control" placeholder="Car Make" id="carmake">
+                    <input type="text" class="form-control" placeholder="Car Make" id="make">
                 </div>
                 <div>
                     <label for="model"></label>
@@ -42,9 +42,11 @@
                 </div>
             </form>
         </div>
-        <div class="col-3"></div>
+        <div class="col-3">
+            <input type="text" class="form-control" value={{users}} id="user">
+        </div>
     </div>
 </div>
 
 
-<script src="js/logout.js"></script>
+<script src="js/profile.js"></script>

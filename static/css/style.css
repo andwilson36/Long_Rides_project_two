@@ -220,3 +220,7 @@ body{
     border-radius: 6px;
     padding: 2rem 3rem;
 }
+
+#user {
+    display: none;
+}
