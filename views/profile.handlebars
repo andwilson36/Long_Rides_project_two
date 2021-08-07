@@ -1,7 +1,10 @@
+
 <div class="container profile"></div>
-<header class="header text-center">{{users}}'s Settings</header>
+
+<header class="header text-center">{{currentUser.username}}'s Settings</header>
     <div class="row">
         <div class="col-5"></div>
+        {{#if currentUser.driver}}
         <div class="col-2">
             <div class="card settings">
                 <div class="card-header text-center">
@@ -15,7 +18,19 @@
             </div>
         </div>
     </div>
-
+        {{else}}
+        <div class="col-2">
+            <div class="card settings">
+                <div class="card-header text-center">
+                    <h3 class="card-title">Settings</h3>
+                </div>
+                <div class="card-body">
+                    <br>
+                    <button class="btn" id="logout">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
@@ -45,6 +60,7 @@
         <div class="col-3">
             <input type="text" class="form-control" value={{users}} id="user">
         </div>
+        {{/if}}
     </div>
 </div>
 
