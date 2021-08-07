@@ -18,7 +18,7 @@ const handleDriverForm = async (event) => {
   const make = document.querySelector('#make').value.trim();
   const model = document.querySelector('#model').value.trim();
   const year = document.querySelector('#year').value.trim();
-  const username = document.querySelector('#user').value;
+  const username = document.querySelector('#user').value.trim();
 
   if (insurance && make && model && year) {
     const response = await fetch(`/api/user-routes/${username}`, {

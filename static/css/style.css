@@ -221,6 +221,6 @@ body{
     padding: 2rem 3rem;
 }
 
-#user {
+.display-none {
     display: none;
 }
