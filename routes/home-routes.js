@@ -57,7 +57,7 @@ router.get("/driver", async (req, res) => {
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
 
-    const userData = await User.findAll();
+    const users = req.session.username;
 
     const rideData = await Ride.findAll();
 
@@ -65,10 +65,6 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     const locations = locationData.map((location) =>
       location.get({ plain: true })
-    );
-
-    const users = userData.map((user) =>
-      user.get({ plain: true })
     );
 
     const ride = rideData.map((rides) =>

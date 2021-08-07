@@ -134,6 +134,7 @@ body{
 
 .dashboard {
     margin-top: 6rem;
+    margin-bottom: 12rem;
 }
 
 #login-btn {
@@ -143,6 +144,10 @@ body{
 #join-btn {
     background-color: #d66102;
     border: 1px solid #BF5700;
+}
+
+.profile {
+    margin-top: 7rem;
 }
 
 #logout {
