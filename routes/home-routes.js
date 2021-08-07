@@ -51,9 +51,17 @@ router.get("/profile", withAuth, async (req, res) => {
 
 router.get("/driver", withAuth, async (req, res) => {
   try {
-
+    const user = await User.findAll();
+    const usersData = user.map((project) => project.get({ plain: true }));
+    let currentUser;
+    for (let i = 0; usersData.length > i; i++) {
+      if (usersData[i].username = req.session.username) {
+        currentUser = usersData[i]
+      }
+    }
 
     res.render("driver-dashboard", {
+      currentUser,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
