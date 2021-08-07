@@ -224,3 +224,8 @@ body{
 .display-none {
     display: none;
 }
+
+.joinButton {
+    color:aliceblue;
+    text-decoration: none;
+}
