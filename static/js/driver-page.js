@@ -6,8 +6,8 @@ const driverFormHandler = async (event) => {
     const price = document.querySelector('#price').value;
     const description = document.querySelector('#description').value;
     //change these 
-    const num_seats = "3";
-    const driver_name = "erin";
+    const num_seats = document.querySelector('#num_seats').value;
+    const driver_name = document.querySelector('#driver_name').value;
     
   
     if (destination && pickup && price && description && num_seats && driver_name) {

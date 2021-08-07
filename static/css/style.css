@@ -198,7 +198,7 @@ body{
 
 #map {
     height: 500px;
-  }
+}
 
 .settings {
     background-color: rgb(240, 240, 240);
@@ -223,4 +223,9 @@ body{
 
 .display-none {
     display: none;
+}
+
+.joinButton {
+    color:aliceblue;
+    text-decoration: none;
 }
