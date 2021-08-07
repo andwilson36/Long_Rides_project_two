@@ -29,16 +29,16 @@ router.get("/signup", async (req, res) => {
 
 router.get("/profile", async (req, res) => {
   try {
-
-
+    const users = req.session.username;
+    console.log(users);
     res.render("profile", {
-    profile: req.session.profile,
+    users,
     loggedIn: req.session.loggedIn,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+  });
+} catch (err) {
+  console.log(err);
+  res.status(500).json(err);
+}
 });
 
 router.get("/driver", async (req, res) => {
@@ -54,7 +54,7 @@ router.get("/driver", async (req, res) => {
   }
 });
 
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
 
     const userData = await User.findAll();

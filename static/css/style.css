@@ -129,6 +129,7 @@ body{
     color:white;
     border:none;
     border-radius: 3px;
+    margin-top: 1.5rem;
 }
 
 .dashboard {
@@ -144,15 +145,14 @@ body{
     border: 1px solid #BF5700;
 }
 
-.ride-info {
-    font-size: 1.2rem;
+#logout {
+    margin-top: .5rem;
+    background-color: #d66102;
+    border: 1px solid #BF5700;
 }
 
-.setbutton{
-    background-color: gray;
-    color:white;
-    border:none;
-    border-radius: 3px;
+.ride-info {
+    font-size: 1.2rem;
 }
 
 #bottomtext {
@@ -160,9 +160,9 @@ body{
     font-size:18px;
 }
 .header{
-    margin-top: 5rem;
-    text-align: center;
-    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
     color:#293740;
     font-weight: bold;
 }
@@ -194,3 +194,20 @@ body{
 #map {
     height: 500px;
   }
+
+.settings {
+    background-color: rgb(240, 240, 240);
+    border: 3px outset rgb(199, 199, 199);
+}
+
+.card-body .btn {
+    color: white;
+}
+
+.driver-form {
+    margin-top: 3rem;
+    background-color: rgb(243, 243, 243);
+    border: 3px outset rgb(199, 199, 199);
+    border-radius: 6px;
+    padding: 2rem 3rem;
+}
