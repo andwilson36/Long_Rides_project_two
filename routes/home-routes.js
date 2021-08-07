@@ -2,7 +2,7 @@ const router = require("express").Router();
 const withAuth = require("../utils/auth");
 const { User, Ride, Location } = require("../models");
 
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll();
 
@@ -27,7 +27,7 @@ router.get("/signup", async (req, res) => {
   }
 });
 
-router.get("/profile", async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     const users = req.session.username;
     console.log(users);
@@ -41,7 +41,7 @@ router.get("/profile", async (req, res) => {
 }
 });
 
-router.get("/driver", async (req, res) => {
+router.get("/driver", withAuth, async (req, res) => {
   try {
 
 
