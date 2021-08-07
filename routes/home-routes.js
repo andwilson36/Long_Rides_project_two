@@ -29,10 +29,18 @@ router.get("/signup", async (req, res) => {
 
 router.get("/profile", withAuth, async (req, res) => {
   try {
-    const users = req.session.username;
-    console.log(users);
+    const user = await User.findAll();
+    const usersData = user.map((project) => project.get({ plain: true }));
+    let currentUser;
+    for (let i = 0; usersData.length > i; i++) {
+      if (usersData[i].username = req.session.username) {
+        currentUser = usersData[i]
+      }
+    }
+    console.log(currentUser);
+    
     res.render("profile", {
-    users,
+    currentUser,
     loggedIn: req.session.loggedIn,
   });
 } catch (err) {
