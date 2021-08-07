@@ -3,35 +3,34 @@
     <header class="header text-center">Welcome, {{currentUser.username}}.</header>
     <div class="col">
       <form class="driver-form">
-        <h3 class="text-center mb-5">Create a Ride</h3>
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
-            <div class="input-group mb-3 col">
-              <input type="text" class="form-control" placeholder="Destination address" id="destination"
-                aria-label="Username" />
-              <span class="input-group-text">add</span>
-              <input type="text" class="form-control" placeholder="Pick-up point" id="pickup" aria-label="Server" />
-            </div>
-            <br />
-            <div class="input-group mb-3 col">
-              <span class="input-group-text">$</span>
-              <input type="number" min="0" class="form-control" id="price" placeholder="Price"
-                aria-label="Amount (to the nearest dollar)" />
-              <span class="input-group-text">.00</span>
-            </div>
-            <br />
-            <div class="mb-3 col">
-              <label for="exampleFormControlTextarea1" class="form-label">Description:</label>
-              <textarea class="form-control" id="description" placeholder="Rules, time, number of stops, etc..."
-                rows="3"></textarea>
-            </div>
-            <br />
-            <div>
-              <button type="submit" class="btn btn-danger d-grid gap-2 col-2 mx-auto" id="join-btn">Create</button>
-            </div>
-          </div>
-          <div class="col-2"></div>
+      <div class="input-group mb-3 col-8">
+        <input type="text" class="form-control" placeholder="Destination address" id="destination" aria-label="Username" />
+        <span class="input-group-text">add</span>
+        <input type="text" class="form-control" placeholder="Pick-up point" id="pickup" aria-label="Server" />
+      </div>
+      <br />
+      <div class="input-group mb-3 col-4">
+        <span class="input-group-text">$</span>
+        <input type="number" min="0" class="form-control" id="price" placeholder="Price"
+          aria-label="Amount (to the nearest dollar)" />
+        <span class="input-group-text">.00</span>
+      </div>
+      <div class="input-group mb-3 col-2">
+        <input type="text" class="form-control" placeholder="Number of Seats" id="num_seats" aria-label="Seats" />
+      </div>
+      <div class="input-group mb-3 col-2">
+        <input type="text" class="form-control" placeholder="Name" id="driver_name" aria-label="name" />
+      </div>
+      <br />
+      <div class="mb-3 col-8">
+        <label for="exampleFormControlTextarea1" class="form-label">Description:</label>
+        <textarea class="form-control" id="description"
+          placeholder="Rules, time, number of stops, etc..." rows="3"></textarea>
+      </div>
+      <br />
+      <div>
+        <button style="margin-left: 1em;" type="submit" class="btn btn-danger">Create</button>
+      </div>
       </form>
     </div>
   </div>
