@@ -9,8 +9,12 @@
           <p class="ride-info"><strong>{{rides.pickup}}</strong> to <strong>{{rides.destination}}</strong></p>
         </div>
         <div class="card-body text-center">
-          <p class="ride-info">Driver: {{rides.driver_name}} - Price: ${{rides.price}} - Available Seats: {{rides.num_seats}}</p>
-          <button class="btn btn-primary" id="join-btn" type="submit"><a href="mailto:email@gmail.com" class="joinButton">Join this ride!</a></button>
+          <p class="ride-info">Driver: {{rides.driver_name}} - Price: ${{rides.price}} - Number of Passengers: {{rides.num_seats}}</p>
+  <div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">{{rides.description}}</textarea>
+  <label for="floatingTextarea2">Comments</label>
+</div>
+          <button class="btn btn-primary" id="join-btn" type="submit">Join this ride!</button>
         </div>
       </div>
       {{/each}}
