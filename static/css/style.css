@@ -200,6 +200,10 @@ body{
     height: 500px;
 }
 
+.filter {
+    margin-top: 3rem;
+}
+
 .settings {
     background-color: rgb(240, 240, 240);
     border: 3px outset rgb(199, 199, 199);
