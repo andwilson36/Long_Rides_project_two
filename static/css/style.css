@@ -29,7 +29,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(224, 224, 224)
+    background-color: rgb(212, 212, 212)
 }
 
 .headLogo{
@@ -133,7 +133,7 @@ body{
 }
 
 .dashboard {
-    margin-top: 6rem;
+    margin-top: 8rem;
     margin-bottom: 12rem;
 }
 
@@ -177,15 +177,16 @@ body{
 }
 
 .list-col {
-    background-color: rgb(243, 243, 243);
-    border: 3px outset rgb(199, 199, 199);
+    background-color: rgb(230, 230, 230);
+    border: 3px outset rgb(128, 128, 128);
     border-radius: 6px;
 }
 
 .dropdown-map {
     background-color: rgb(243, 243, 243);
-    border: 3px outset rgb(199, 199, 199);
+    border: 3px outset rgb(128, 128, 128);
     border-radius: 6px;
+    padding-right: 0px;
 }
 
 #start {
@@ -206,11 +207,15 @@ body{
 
 .settings {
     background-color: rgb(240, 240, 240);
-    border: 3px outset rgb(199, 199, 199);
+    border: 3px outset rgb(128, 128, 128);
+}
+
+.card-body {
+    background-color: rgb(240, 240, 240)
 }
 
 .card {
-    border: 3px outset rgb(199, 199, 199)
+    border: 3px outset rgb(148, 148, 148)
 }
 
 .card-body .btn {
@@ -220,7 +225,7 @@ body{
 .driver-form {
     margin-top: 3rem;
     background-color: rgb(243, 243, 243);
-    border: 3px outset rgb(199, 199, 199);
+    border: 3px outset rgb(128, 128, 128);
     border-radius: 6px;
     padding: 2rem 3rem;
 }
