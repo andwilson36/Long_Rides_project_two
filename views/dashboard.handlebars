@@ -43,12 +43,14 @@
             style="height: 100px">{{rides.description}}</textarea>
           <label for="floatingTextarea2">Comments</label>
         </div>
-        <button class="btn btn-primary" id="join-btn" type="submit">Join this ride!</button>
+        <button class="btn join btn-primary mt-2" id="join-btn" type="button" onclick="setValue('{{rides.pickup}}', '{{rides.destination}}')" >Join this ride!</button>
       </div>
     </div>
     {{/each}}
   </div>
 </div>
+
+<script src="js/dashboard.js"></script>
 
 <script>
   function initMap() {
@@ -88,14 +90,13 @@
       })
       .catch((e) => window.alert("Directions request failed due to " + status));
   }
-
-
 </script>
 
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YUeF9azIgULQN0QlDqqyq7RjRkg20qY&callback=initMap&libraries=&v=weekly"
   async></script>
 
+<script src="js/dashboard.js"></script>
 
 <footer style="height: 100px;" class="bg-dark text-center text-white fixed-bottom">
   <!-- Grid container -->
