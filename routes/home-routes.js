@@ -60,7 +60,17 @@ router.get("/driver", withAuth, async (req, res) => {
       }
     }
 
+    const rideData = await Ride.findAll();
+
+    const locationData = await Location.findAll();
+
+    const locations = locationData.map((location) =>
+      location.get({ plain: true })
+    );
+
     res.render("driver-dashboard", {
+      rideData,
+      locations,
       currentUser,
       loggedIn: req.session.loggedIn,
     });

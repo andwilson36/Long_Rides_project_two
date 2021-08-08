@@ -7,10 +7,17 @@
         <div class="col-2"></div>
         <div class="col-8">
           <div class="input-group mb-3 col">
-            <input type="text" class="form-control" placeholder="Destination address" id="destination"
-              aria-label="Username" />
+            <select class="form-control" placeholder="Pick-Up Location" id="pickup" aria-label="Pick-Up">
+              {{#each locations as |location|}}
+              <option value="{{location.name}}">{{location.name}}</option>
+              {{/each}}
+            </select>
             <span class="input-group-text">add</span>
-            <input type="text" class="form-control" placeholder="Pick-up point" id="pickup" aria-label="Server" />
+            <select class="form-control" placeholder="destination Location" id="destination" aria-label="destination">
+              {{#each locations as |location|}}
+              <option value="{{location.name}}">{{location.name}}</option>
+              {{/each}}
+            </select>
           </div>
           <br />
           <div class="row">
@@ -29,7 +36,7 @@
             <div class="col-5"></div>
             <div class="col-2">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Number of Seats" id="num_seats"
+                <input type="text" class="form-control" placeholder="# of Seats" id="num_seats"
                   aria-label="Seats" />
               </div>
             </div>
@@ -49,9 +56,10 @@
       </div>
     </form>
   </div>
+  <input type="text" class="form-control display-none" value={{currentUser.username}} id="user">
 </div>
-</div>
-<script src="js/driver-page.js"></script>
+
+<script src="js/driver-dashboard.js"></script>
 <footer style="height: 100px;" class="bg-dark text-center text-white fixed-bottom">
   <!-- Grid container -->
   <div style="height: 50px; margin:auto;" class="container p-4 pb-0">

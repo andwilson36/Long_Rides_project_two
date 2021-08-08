@@ -1,14 +1,11 @@
 const router = require("express").Router();
 const { Ride } = require('../../models');
-const withAuth = require('../../utils/auth');
 
 // the /api/drive-routes endpoint
 
 //driver
 
 router.post('/', async (req, res) => {
-  console.log(req.body);
-  const body = req.body;
     try {
         const newDrive = await Ride.create({ 
             destination: req.body.destination,
@@ -17,9 +14,8 @@ router.post('/', async (req, res) => {
             description: req.body.description,
             num_seats: req.body.num_seats,
             driver_name: req.body.driver_name,
-            car: req.body.car, 
-            driver_id: req.session.driver_id,
         });
+        console.log(newDrive)
         res.json(newDrive);
   } catch (err) {
     res.status(500).json(err);
