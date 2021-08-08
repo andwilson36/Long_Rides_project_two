@@ -1,46 +1,48 @@
 <div class="container dashboard">
-  <div class="row auto-mx">
-    <header class="header text-center">Welcome, {{users}}.</header>
-    <div class="col-sm list-col">
-      <h2>Ride list:</h2>
-      {{#each ride as |rides|}}
-      <div class="card">
-        <div class="card-header text-center">
-          <p class="ride-info"><strong>{{rides.pickup}}</strong> to <strong>{{rides.destination}}</strong></p>
-        </div>
-        <div class="card-body text-center">
-          <p class="ride-info">Driver: {{rides.driver_name}} - Price: ${{rides.price}} - Number of Passengers: {{rides.num_seats}}</p>
-  <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">{{rides.description}}</textarea>
-  <label for="floatingTextarea2">Comments</label>
-</div>
-          <button class="btn btn-primary" id="join-btn" type="submit">Join this ride!</button>
-        </div>
-      </div>
-      {{/each}}
+  <header class="header text-center">Welcome, {{users}}.</header>
+  <div class="col-1"></div>
+  <div class="col-sm dropdown-map mb-3 pb-3">
+    <h2 class="text-center">Filter Ride</h2>
+    <div class='form-field'>
+      <label class="label">Pick-Up:</label>
+      <select id='start' class='form-control'>
+        {{#each locations as |location|}}
+        <option value="{{location.address}}">{{location.name}}</option>
+        {{/each}}
+      </select>
     </div>
-    <div class="col-1"></div>
-    <div class="col-sm dropdown-map">
-      <div class='form-field'>
-        <label class="label">Pick-Up:</label>
-        <select id='start' class='form-control'>
-          {{#each locations as |location|}}
-          <option value="{{location.address}}">{{location.name}}</option>
-          {{/each}}
-        </select>
-      </div>
 
-      <div class='form-field'>
-        <label class="label">Destination:</label>
-        <select id='end' class='form-control'>
-          {{#each locations as |location|}}
-          <option value="{{location.address}}">{{location.name}}</option>
-          {{/each}}
-        </select>
-      </div>
-      <div id="map"></div>
+    <div class='form-field'>
+      <label class="label">Destination:</label>
+      <select id='end' class='form-control'>
+        {{#each locations as |location|}}
+        <option value="{{location.address}}">{{location.name}}</option>
+        {{/each}}
+      </select>
     </div>
+    <div id="map"></div>
   </div>
+  <div class="col-sm list-col">
+    <h2 class="text-center m-3">Ride List</h2>
+    {{#each ride as |rides|}}
+    <div class="card">
+      <div class="card-header text-center">
+        <p class="ride-info"><strong>{{rides.pickup}}</strong> to <strong>{{rides.destination}}</strong></p>
+      </div>
+      <div class="card-body text-center">
+        <p class="ride-info">Driver: {{rides.driver_name}} - Price: ${{rides.price}} - Number of Passengers:
+          {{rides.num_seats}}</p>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+            style="height: 100px">{{rides.description}}</textarea>
+          <label for="floatingTextarea2">Comments</label>
+        </div>
+        <button class="btn btn-primary" id="join-btn" type="submit">Join this ride!</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
 </div>
 
 <script>
