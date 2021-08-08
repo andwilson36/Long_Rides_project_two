@@ -56,6 +56,25 @@
       </div>
     </form>
   </div>
+  <div class="col-7 list-col mx-auto mt-5">
+    <h2 class="text-center m-3">Your Ride List</h2>
+    {{#each currentUserRides as |ride|}}
+    <div class="card">
+      <div class="card-header text-center">
+        <p class="ride-info"><strong>{{ride.pickup}}</strong> to <strong>{{ride.destination}}</strong></p>
+      </div>
+      <div class="card-body text-center">
+        <p class="ride-info">Driver: {{ride.driver_name}} - Price: ${{ride.price}} - Number of Passengers:
+          {{ride.num_seats}}</p>
+        <div class="form-floating">
+          <textarea readonly='true' class="form-control" placeholder="No Description" id="floatingTextarea2"
+            style="height: 100px">{{ride.description}}</textarea>
+          <label for="floatingTextarea2">Description:</label>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
   <input type="text" class="form-control display-none" value={{currentUser.username}} id="user">
 </div>
 

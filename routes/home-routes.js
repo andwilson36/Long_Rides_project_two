@@ -37,16 +37,15 @@ router.get("/profile", withAuth, async (req, res) => {
         currentUser = usersData[i]
       }
     }
-    console.log(currentUser);
-    
+
     res.render("profile", {
-    currentUser,
-    loggedIn: req.session.loggedIn,
-  });
-} catch (err) {
-  console.log(err);
-  res.status(500).json(err);
-}
+      currentUser,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.get("/driver", withAuth, async (req, res) => {
@@ -54,6 +53,7 @@ router.get("/driver", withAuth, async (req, res) => {
     const user = await User.findAll();
     const usersData = user.map((project) => project.get({ plain: true }));
     let currentUser;
+    let currentUserRides = [];
     for (let i = 0; usersData.length > i; i++) {
       if (usersData[i].username = req.session.username) {
         currentUser = usersData[i]
@@ -68,10 +68,19 @@ router.get("/driver", withAuth, async (req, res) => {
       location.get({ plain: true })
     );
 
+    let j = 0;
+    for (let i = 0; rideData.length > i; i++) {
+      if (rideData[i].driver_name === currentUser.username) {
+        currentUserRides[j] = rideData[i].dataValues;
+        j++;
+      }
+    }
+
     res.render("driver-dashboard", {
       rideData,
       locations,
       currentUser,
+      currentUserRides,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
