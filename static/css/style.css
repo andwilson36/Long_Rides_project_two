@@ -238,3 +238,9 @@ body{
     color:aliceblue;
     text-decoration: none;
 }
+
+.footer {
+    border-top: 2px solid rgb(124, 124, 124);
+    background-color: rgb(175, 175, 175);
+    padding: 4rem;
+}
