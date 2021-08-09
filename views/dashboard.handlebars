@@ -43,8 +43,7 @@
             style="height: 100px">{{rides.description}}</textarea>
           <label for="floatingTextarea2">Description:</label>
         </div>
-        <button class="btn join btn-primary mt-2" id="join-btn" type="button" data-pickup={{rides.pickup}}
-          data-destination={{rides.destination}}>Join
+        <button class="btn join btn-primary mt-2" id="join-btn" type="button" onclick="setValue('{{rides.pickup}}', '{{rides.destination}}')">Join
           this ride!</button>
       </div>
     </div>
@@ -52,16 +51,9 @@
   </div>
 </div>
 
-{{!--
-<script src="js/dashboard.js"></script> --}}
+<script src="js/dashboard.js"></script> 
 
 <script>
-  let joinBtns = document.querySelectorAll('.join');
-  console.log(joinBtns)
-  joinBtns.forEach(btn => {
-    return btn.addEventListener('click', (e) => setValue(e))
-  })
-
   function initMap() {
     const directionsService = new google.maps.DirectionsService();
     const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -80,49 +72,6 @@
     };
     document.getElementById("start").addEventListener("change", onChangeHandler);
     document.getElementById("end").addEventListener("change", onChangeHandler);
-  }
-
-  function setValue(e) {
-    let pickup = e.target.dataset.pickup;
-    let destination = e.target.dataset.destination;
-    let startingAddress;
-    let endingAddress;
-    console.log(destination)
-    switch (pickup) {
-      case 'UT Campus':
-        startingAddress = 'University of Texas, Austin, TX';
-        break;
-      case 'Austin Airport':
-        startingAddress = '3600 Presidential Blvd, Austin, TX 78719';
-        break;
-      case 'Rainey Street':
-        startingAddress = '2207 Lou Neff Rd, Austin, TX 78746';
-        break;
-      case 'Barton Springs Pool':
-        startingAddress = 'Barton Springs Rd, Austin, TX 78704'
-    }
-    switch (destination) {
-      case 'UT Campus':
-        endingAddress = 'University of Texas, Austin, TX';
-        break;
-      case 'Austin Airport':
-        endingAddress = '3600 Presidential Blvd, Austin, TX 78719';
-        break;
-      case 'Rainey Street':
-        endingAddress = '2207 Lou Neff Rd, Austin, TX 78746';
-        break;
-      case 'Zilker Park':
-        endingAddress = '2207 Lou Neff Rd, Austin, TX 78746';
-        break;
-      case 'Barton Springs Pool':
-        endingAddress = 'Barton Springs Rd, Austin, TX 78704';
-        break;
-    }
-
-    document.getElementById('start').value = pickup;
-    document.getElementById('end').value = destination;
-
-    initMap();
   }
 
   function calculateAndDisplayRoute(directionsService, directionsRenderer) {

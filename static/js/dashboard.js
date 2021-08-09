@@ -1,7 +1,7 @@
 function setValue(pickup, destination) {
   let startingAddress;
   let endingAddress;
-  console.log(destination)
+
   switch (pickup) {
     case 'UT Campus':
       startingAddress = 'University of Texas, Austin, TX';
