@@ -43,7 +43,8 @@
             style="height: 100px">{{rides.description}}</textarea>
           <label for="floatingTextarea2">Description:</label>
         </div>
-        <button class="btn join btn-primary mt-2" id="join-btn" type="button" onclick="setValue('{{rides.pickup}}', '{{rides.destination}}')">Join
+        <button class="btn join btn-primary mt-2" id="join-btn" type="button"
+          onclick="setValue('{{rides.pickup}}', '{{rides.destination}}')">Join
           this ride!</button>
       </div>
     </div>
@@ -51,7 +52,7 @@
   </div>
 </div>
 
-<script src="js/dashboard.js"></script> 
+<script src="js/dashboard.js"></script>
 
 <script>
   function initMap() {
@@ -96,3 +97,13 @@
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YUeF9azIgULQN0QlDqqyq7RjRkg20qY&callback=initMap&libraries=&v=weekly"
   async></script>
+
+<footer class="footer">
+  <div class="content text-center">
+    <p>
+      <strong>Long Rides</strong> by Andrew Wilson, Erin Lim, Rico Perez, Einstein Dalmau and Michael Smith.<br> The
+      source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+    </p>
+  </div>
+</footer>
