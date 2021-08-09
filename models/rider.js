@@ -1,8 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
 
-class rider extends Model {}
+class rider extends Model { }
 
 rider.init(
   {
@@ -13,7 +12,7 @@ rider.init(
       references: {
         model: 'user',
         key: 'user_id',
-    }
+      }
     },
   },
   {

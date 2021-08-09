@@ -7,7 +7,7 @@ const createRideFormHandler = async (event) => {
     const num_seats = document.querySelector('#num_seats').value.trim();
     const description = document.querySelector('#description').value;
     const driver_name = document.querySelector('#user').value;
-    console.log(pickup); 
+    console.log(pickup);
     if (pickup && destination && price && num_seats && description && driver_name) {
         const response = await fetch('/api/drive-routes/', {
             method: 'POST',

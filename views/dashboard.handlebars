@@ -52,14 +52,15 @@
   </div>
 </div>
 
-{{!-- <script src="js/dashboard.js"></script> --}}
+{{!--
+<script src="js/dashboard.js"></script> --}}
 
 <script>
   let joinBtns = document.querySelectorAll('.join');
   console.log(joinBtns)
   joinBtns.forEach(btn => {
-      return btn.addEventListener('click',(e) => setValue(e))
-    })
+    return btn.addEventListener('click', (e) => setValue(e))
+  })
 
   function initMap() {
     const directionsService = new google.maps.DirectionsService();

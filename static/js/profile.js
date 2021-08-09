@@ -40,6 +40,6 @@ document
   .querySelector('#logout')
   .addEventListener('click', logout);
 
-document  
+document
   .querySelector('#driver-form')
   .addEventListener('submit', handleDriverForm);
