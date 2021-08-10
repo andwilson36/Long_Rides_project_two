@@ -1,4 +1,4 @@
-# Project_2
+# Long_Rides_Project_2
 
 ## The Goal
 Long Rides is an application that allows UT students to have an affordable and convenient rideshare system. Students are able to receive rides from other students who create driver profiles. These drivers can customize their pick-up and destination locations, prices, and can give a brief description of the ride (number of stops, rules). This allows students to be able to make money while giving others rides and other students to have a cheaper alterntive to pricey ride share apps like Uber, Lyft, and Hitch.
