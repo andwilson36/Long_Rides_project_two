@@ -1,7 +1,7 @@
 # Long_Rides_Project_2
 
 ## The Goal
-Long Rides is an application that allows UT students to have an affordable and convenient rideshare system. Students are able to receive rides from other students who create driver profiles. These drivers can customize their pick-up and destination locations, prices, and can give a brief description of the ride (number of stops, rules). This allows students to be able to make money while giving others rides and other students to have a cheaper alterntive to pricey ride share apps like Uber, Lyft, and Hitch.
+Long Rides is a application that allows UT students to have an affordable and convenient rideshare system. Students are able to receive rides from other students who create driver profiles. These drivers can customize their pick-up and destination locations, prices, and can give a brief description of the ride (number of stops, rules). This allows students to be able to make money while giving others rides and other students to have a cheaper alterntive to pricey ride share apps like Uber, Lyft, and Hitch.
 
 ## How it's Made
 Long Rides was built using Handlebars, CSS, NodeJS, Express.JS, MySQL, Sequelize ORM, and Javascript. With combined use, we were able to construct a functional and convenient website where UT students can get rides and create rides for others. Using a Google Maps API, we were able to display a map of rides from different pick up points and destinations. Long Rides is an application free to use by any UT Austin Students.
